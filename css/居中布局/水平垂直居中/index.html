@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .out {
+            width: 500px;
+            height: 500px;
+            background: green;
+            margin: 20px auto;
+        }
+
+        .in {
+            /* width: 200px;
+            height: 200px; */
+            background: red;
+            color: white;
+            padding: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out out1">
+        <style>
+            .out1 {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            .in1 {
+                display: inline-block;
+            }
+        </style>
+        <div class="in in1">inline-block + table-cell + text-align + vertical-align</div>
+    </div>
+
+    <div class="out out2">
+        <style>
+            /* 兼容至ie8 */
+            .out2 {
+                position: relative;
+            }
+
+            .in2 {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+        <div class="in in2">absolute + transform</div>
+    </div>
+
+    <div class="out out3">
+        <style>
+            /* 兼容至ie10以上 */
+            .out3{
+                display: flex;
+                justify-content: center;
+                align-items: center
+            }
+        </style>
+        <div class="in in3">flex</div>
+    </div>
+</body>
+
+</html>

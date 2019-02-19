@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .left{
+            background: green
+        }
+        .right{
+            background: yellow
+        }
+        .right,.left{
+            height: 200px
+        }
+        section{
+            margin-bottom: 20px
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <style>
+            .left1{
+                float: left;
+                margin-right: 20px;
+            }
+            .right1{
+                overflow: hidden;
+            }
+        </style>
+        <div class="left left1">float + overflow</div>
+        <div class="right right1">float + overflow</div>
+    </section>
+
+    <section style="display: table">
+        <style>
+            .left2,.right2{
+                display: table-cell;
+            }
+            .right2{
+                width: 100%;
+            }
+        </style>
+        <div class="left left2">table</div>
+        <div class="right right2">table</div>
+    </section>
+
+    <section style="display: flex">
+        <style>
+            .right3{
+                flex: 1
+            }
+        </style>
+        <div class="left left3">flex</div>
+        <div class="right right3">flex</div>
+    </section>
+</body>
+
+</html>

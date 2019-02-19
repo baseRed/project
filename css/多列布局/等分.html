@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            background: grey
+        }
+
+        section {
+            margin-top: 20px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <section style="margin-left:-20px;background:lightgrey">
+        <style>
+            .column1 {
+                float: left;
+                width: 25%;
+                /* padding留白 */
+                padding-left: 20px;
+                box-sizing: border-box;
+            }
+        </style>
+        <div class="column1">float + margin</div>
+        <div class="column1">float + margin</div>
+        <div class="column1">float + margin</div>
+        <div class="column1">float + margin</div>
+    </section>
+
+    <section style="margin-left: -20px;">
+        <style>
+            .parent {
+                display: table;
+                width: 100%
+            }
+
+            .column2 {
+                display: table-cell;
+                padding-left: 20px;
+            }
+        </style>
+        <div class="parent">
+            <div class="column2">table + margin</div>
+            <div class="column2">table + margin</div>
+            <div class="column2">table + margin</div>
+            <div class="column2">table + margin</div>
+        </div>
+    </section>
+
+    <section style="display: flex">
+        <style>
+            .column3 {
+                flex: 1
+            }
+
+            .column3+.column3 {
+                margin-left: 20px;
+            }
+        </style>
+        <div class="column3">flex</div>
+        <div class="column3">flex</div>
+        <div class="column3">flex</div>
+        <div class="column3">flex</div>
+    </section>
+
+</body>
+
+</html>

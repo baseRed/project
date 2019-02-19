@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .out {
+            width: 500px;
+            height: 500px;
+            background: green;
+            margin: 20px auto;
+        }
+
+        .in {
+            width: 200px;
+            height: 200px;
+            background: red;
+            color: white;
+            padding: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out out1">
+        <style>
+            /* 此方案兼容性较好，可兼容至IE8，对于IE567并不支持inline-block，需要使用css hack进行兼容 */
+            .out1{
+                text-align: center;
+            }
+
+            .in1{
+                display: inline-block;
+            }
+
+        </style>
+        <div class="in in1">inline-block + text-align</div>
+    </div>
+
+    <div class="out out2">
+        <style>
+            /* 此方案兼容至IE8，可以使用<table/>代替css写法，兼容性良好 */
+            .in2{
+                display: table;
+                margin: 0 auto
+            }
+        </style>
+        <div class="in in2">table + margin</div>
+    </div>
+
+
+    <div class="out out3">
+        <style>
+            .out3{
+                position: relative;
+            }
+            .in3{
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%)
+            }
+
+            /* 此方案兼容至IE9，因为transform兼容性限制，如果.in为定宽元素,兼容性极佳 */
+        </style>
+        <div class="in in3">absolute + transform</div>
+    </div>
+
+    <div class="out out4">
+        <style>
+            /* flex是一个强大的css，生而为布局，它可以轻松的满足各种居中、对其、平分的布局要求，但由于现浏览器兼容性问题，此方案很少被使用*/
+            .out4{
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+        <div class="in in4">flex + justify-content</div>
+    </div>
+
+   
+</body>
+
+</html>

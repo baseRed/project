@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .out {
+            width: 500px;
+            height: 500px;
+            background: green;
+            margin: 20px auto;
+        }
+
+        .in {
+            width: 200px;
+            height: 200px;
+            background: red;
+            color: white;
+            padding: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out out1">
+        <style>
+            /* 可替换成<table />布局，兼容性良好 */
+            .out1{
+                display: table-cell;
+                vertical-align: middle;
+                margin: 0 auto
+            }
+        </style>
+        <div class="in in1">table-cell + vertial-align</div>
+    </div>
+
+    <div class="out out2">
+        <style>
+            /* 存在css3兼容问题，定宽兼容性良好 */
+            .out2{
+                position: relative;
+            }
+            .in2{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%)
+            }
+        </style>
+        <div class="in in2">absolute + transform</div>
+    </div>
+
+    <div class="out out3">
+        <style>
+            .out3{
+                display: flex;
+                align-items: center
+            }
+            
+        </style>
+        <div class="in in3">flex + align-items</div>
+    </div>
+</body>
+
+</html>

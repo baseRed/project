@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .left{
+            width: 200px;
+            background: red;
+        }
+        .center{
+            width: 200px;
+            background: yellow;
+        }
+        .right{
+            background: green;
+        }
+        div{
+            height: 300px
+        }
+        section{
+            margin-top: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <style>
+            .left1,.center1{
+                margin-right: 20px;
+                float: left; 
+            }
+            .right1{
+                overflow: hidden;
+            }
+        </style>
+        <div class="left left1"></div>
+        <div class="center center1">float + overflow</div>
+        <div class="right right1"></div>
+    </section>
+
+    <section style="display: table;table-layout: fixed;">
+        <style>
+            .left2,.center2,.right2{
+                display: table-cell
+            }
+            .left2,.center2{
+                padding-right: 20px;
+            }
+            .right2{
+                padding-right: 20px
+            }
+        </style>
+        <div class="left left2"></div>
+        <div class="center center2">table</div>
+        <div class="right right2"></div>
+    </section>
+
+    <section style="display:flex">
+        <style>
+            .left3,.center3{
+                margin-right: 20px
+            }
+            .right3{
+                flex: 1
+            }
+        </style>
+        <div class="left left3"></div>
+        <div class="center center3">flex</div>
+        <div class="right right3"></div>
+    </section>
+</body>
+
+</html>
